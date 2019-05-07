@@ -90,7 +90,7 @@
             </plugin>
 
 
-            <!-- OWASP dpendency checker -->
+            <!-- OWASP dependency checker -->
             <plugin>
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
@@ -102,6 +102,10 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <failBuildOnAnyVulnerability>true</failBuildOnAnyVulnerability>
+                    <assemblyAnalyzerEnabled>false</assemblyAnalyzerEnabled>
+                </configuration>
             </plugin>
 
         </plugins>
